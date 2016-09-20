@@ -11,10 +11,39 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/cayman.css">
    
+    <link rel="stylesheet" href="css/jq-ui.css">
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+
+    <script>
+  $( function() {
+    $( "#slider" ).slider({
+      min:0,
+      max:5,
+      step:1,
+      value:5,
+      slide: function(event, ui){
+        console.log(ui.value);
+        switch (ui.value){
+          case 5: break;
+          case 4: $('link[rel=stylesheet]').remove();
+
+        }
+  }  
+    });
+  } );
+  </script>
+
+
+   
 
   </head>
   <body>
     <section class="page-header">
+
+ 
       <h1 class="project-name">Kent Walters</h1>
       <h2 class="project-tagline">University of Saskatchewan Computer Science Student</h2>
       <a href="https://github.com/kentwalters" class="btn">Github</a>
@@ -23,6 +52,7 @@
     </section>
 
     <section class="main-content">
+
 
     <h1>About</h1>
     <p>I am a Computer Science student at the University of Saskatchewan, in Saskatoon, Saskatchewan, Canada.</p>
@@ -53,6 +83,8 @@
 
 
       <footer class="site-footer">
+      <p>Site-wide abstraction value:</p>
+           <div id="slider"></div>
       </footer>
 
     </section>
