@@ -1,7 +1,13 @@
 .sm-indent{
-	margin-left: 25px;
-}
+/*	margin-left: 25px;
+*/}
 .big-indent{
 	margin-left: 50px;
 }
-
+h3 a{
+	color: inherit;
+}
+.hr{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
